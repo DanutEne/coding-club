@@ -7,7 +7,7 @@ func TestUniqueChars(t *testing.T) {
 		want := true
 		got := UniqueChars(TestString)
 		if got != want {
-			t.Errorf("Expected isUniqueChars(%s) to be %t, but got %t", TestString, want, got)
+			t.Errorf("Expected UniqueChars(%s) to be %t, but got %t", TestString, want, got)
 		}
 	})
 
@@ -15,7 +15,7 @@ func TestUniqueChars(t *testing.T) {
 		want := false
 		got := UniqueChars(TestString)
 		if got != want {
-			t.Errorf("Expected isUniqueChars(%s) to be %t, but got %t", TestString, want, got)
+			t.Errorf("Expected UniqueChars(%s) to be %t, but got %t", TestString, want, got)
 		}
 	})
 }
