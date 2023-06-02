@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-func TestIsUniqueChars(t *testing.T) {
+func TestUniqueChars(t *testing.T) {
 	t.Run("test if the return is true", func(t *testing.T) {
 		want := true
 		got := UniqueChars(TestString)
@@ -18,4 +18,10 @@ func TestIsUniqueChars(t *testing.T) {
 			t.Errorf("Expected isUniqueChars(%s) to be %t, but got %t", TestString, want, got)
 		}
 	})
+}
+
+func BenchmarkUniqueChars(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		UniqueChars(TestString)
+	}
 }
