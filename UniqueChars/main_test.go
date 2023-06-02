@@ -2,16 +2,20 @@ package main
 
 import "testing"
 
-func TestUniqueChars(t *testing.T) {
-
-	t.Run("uniq chars", func(t *testing.T) {
-		chars := "abcde"
-
-		got := UniqueChars(chars)
+func TestIsUniqueChars(t *testing.T) {
+	t.Run("test if the return is true", func(t *testing.T) {
 		want := true
-
+		got := UniqueChars(TestString)
 		if got != want {
-			t.Errorf("got %d want %d given, %v", got, want, numbers)
+			t.Errorf("Expected isUniqueChars(%s) to be %t, but got %t", TestString, want, got)
+		}
+	})
+
+	t.Run("test if the return is false", func(t *testing.T) {
+		want := false
+		got := UniqueChars(TestString)
+		if got != want {
+			t.Errorf("Expected isUniqueChars(%s) to be %t, but got %t", TestString, want, got)
 		}
 	})
 }
