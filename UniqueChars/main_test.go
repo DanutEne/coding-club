@@ -20,7 +20,7 @@ func TestUniqueChars(t *testing.T) {
 	})
 }
 
-// go test -bench=. | 53.87 ns/op
+// 53.87 ns/op
 func BenchmarkUniqueChars(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		UniqueChars(TestString)
