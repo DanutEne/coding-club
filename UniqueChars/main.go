@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-var TestString = "Hello"
+var TestString = "Hi"
 
 func main() {
-	fmt.Println(UniqueChars(TestString))
+	fmt.Printf("%t\n", UniqueChars(TestString))
 }
 
 func UniqueChars(str string) bool {
