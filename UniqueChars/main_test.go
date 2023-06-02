@@ -10,14 +10,6 @@ func TestUniqueChars(t *testing.T) {
 			t.Errorf("Expected UniqueChars(%s) to be %t, but got %t", TestString, want, got)
 		}
 	})
-
-	t.Run("test if the return is false", func(t *testing.T) {
-		want := false
-		got := UniqueChars(TestString)
-		if got != want {
-			t.Errorf("Expected UniqueChars(%s) to be %t, but got %t", TestString, want, got)
-		}
-	})
 }
 
 // 53.87 ns/op
