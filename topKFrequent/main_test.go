@@ -56,3 +56,9 @@ func Test_topKFrequent(t *testing.T) {
 		})
 	}
 }
+
+func BenchmarkUniqueChars(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		topKFrequent([]int{1, 1, 1, 2, 2, 3, 3}, 3)
+	}
+}
