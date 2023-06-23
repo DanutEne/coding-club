@@ -1,4 +1,3 @@
+## ignoring goland files
+.idea
 
-.idea/workspace.xml
-.idea/modules.xml
-.idea/coding-club.iml
