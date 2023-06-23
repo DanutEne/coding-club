@@ -63,6 +63,22 @@ func (l *LinkedList) Print(w io.Writer) error {
 // The list passed in as a parameter should not be modified, a new list should be returned.
 // Feel free to add any methods needed to the Node or LinkedList structs above.
 func RemoveDuplicates(list *LinkedList) *LinkedList {
+	if list == nil || list.Head == nil {
+		return list
+	}
+
+	distinctValues := make(map[int]bool)
+	distinctList := NewLinkedList()
+
+	current := list.Head
+	for current != nil {
+		value := current.Value
+		if !distinctValues[value] {
+			distinctValues[value] = true
+			distinctList.Add(value)
+		}
+		current = current.Next
+	}
 
 	return list
 }
