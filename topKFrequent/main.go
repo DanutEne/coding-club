@@ -5,21 +5,21 @@ import (
 )
 
 func main() {
-	fmt.Println(topKFrequent([]int{1, 1, 1, 2, 2, 3, 3}, 3))
+	fmt.Println(topKFrequent([]int{1, 1, 1, 2, 2, 3, 3, 3, 3}, 3))
 	//fmt.Println(topKFrequent2([]int{1, 1, 1, 2, 2, 3, 3}, 3))
 	//fmt.Println(topKFrequent3([]int{1, 1, 1, 2, 2, 3, 3}, 3))
 	//fmt.Println(topKFrequent4([]int{1, 1, 1, 2, 2, 3, 3}, 3))
 }
 
 // solution 1
-// O(n^2)
+// O(^n2)
 func topKFrequent(nums []int, k int) []int {
 	freq := make(map[int]int)
 	for _, num := range nums {
 		freq[num]++
 	}
 
-	// fmt.Println(freq)
+	fmt.Println(freq)
 
 	getK := make([]int, k)
 	for i := 0; i < k; i++ {
@@ -27,6 +27,7 @@ func topKFrequent(nums []int, k int) []int {
 			if count > freq[getK[i]] {
 				getK[i] = num
 			}
+			fmt.Println(num, count, getK)
 		}
 		delete(freq, getK[i])
 	}
@@ -36,8 +37,8 @@ func topKFrequent(nums []int, k int) []int {
 	return getK
 }
 
-// solution 2
-// O(n)
+////solution 2
+////O(n)
 //func topKFrequent2(nums []int, k int) []int {
 //	freq := make(map[int]int)
 //	for _, num := range nums {
